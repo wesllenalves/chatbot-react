@@ -5,7 +5,8 @@ class Home extends  Component  {
         return (
             <div className="home">
                 <p className="App-intro">
-                     To get started, edit <code>src/App.js</code> and save to reload.
+                     <p>Um Simples chatbot para trabalhar via web.</p>
+                     <p>Integrado via react e IBM watson assistant.</p>
                 </p>
                 <Button color="danger">Danger!</Button>
             </div>

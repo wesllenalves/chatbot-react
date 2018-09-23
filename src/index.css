@@ -4,21 +4,21 @@ body {
   font-family: sans-serif;
 }
 .header {
-background: blue;
+background:rgb(60, 60, 209);
 text-align: center;
 color: aliceblue;
-padding: 60px;
+padding: 20px;
 }
 
 .home {
   flex: 70%;
-  background-color: aqua;
+  background-color: white;
   padding: 20px;
 }
 
 .chatbot {
   float: 30%;
-  background-color: cadetblue;
+  background-color: #f1f1f1;
   padding: 20px;
   position: fixed;
   right: 0;
@@ -27,9 +27,9 @@ padding: 60px;
 }
 
 .footer {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  background: red;
+  background:#ddd;
   position: fixed;
   width: 100%;
   bottom: 0;
