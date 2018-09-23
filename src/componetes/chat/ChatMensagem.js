@@ -1,8 +1,16 @@
 import React from 'react'
+import { InputGroup, Input, InputGroupAddon, Button} from 'reactstrap'
 
 const ChatMensagem = props => {
     return (
-        <div>Dgite sua mensagem</div>
+        <div className="chat-mensagem">
+        <InputGroup>
+            <Input placeholder='Digite sua mensagem'/>
+            <InputGroupAddon addonType='append'>
+                <Button color="success">Enviar</Button>
+            </InputGroupAddon>
+        </InputGroup>           
+        </div>
     )
 }
 export default ChatMensagem

@@ -2,7 +2,9 @@ import React from 'react'
 
 const ChatHeader = props => {
     return (
-        <div>ChatBot</div>
+        <div className="chat-header">
+            ChatBot
+        </div>
     )
 }
 export default ChatHeader

@@ -4,38 +4,38 @@ body {
   font-family: sans-serif;
 }
 .header {
+grid-area: header;
 background:rgb(60, 60, 209);
 text-align: center;
 color: aliceblue;
-padding: 20px;
 }
 
 .home {
-  flex: 70%;
+  grid-area: home;
   background-color: white;
-  padding: 20px;
 }
 
 .chatbot {
-  float: 30%;
+  grid-area: chatbot;
   background-color: #f1f1f1;
-  padding: 20px;
-  position: fixed;
-  right: 0;
-  height: 100%;
-  width: 25%;
+  height: calc(100vh - 145px);
 }
 
 .footer {
-  padding: 10px;
+  grid-area: footer;
   text-align: center;
   background:#ddd;
-  position: fixed;
+  padding-bottom: 2%;
+  height: 20px;
   width: 100%;
   bottom: 0;
+  position: absolute;
 }
 
 .conteudo {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-areas: 
+  'header header header header'
+  'home home home chatbot'
+  'footer footer footer footer';
 }
