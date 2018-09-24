@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
-import { InputGroup, Input, InputGroupAddon, Button} from 'reactstrap'
+import { InputGroup, InputGroupAddon, Input, Button} from 'reactstrap'
 import {connect} from 'react-redux'
-import {enviaMensagem} from './../../store/actions/chat'
 
+
+import {enviaMensagem} from './../../store/actions/chat'
+import {conversaWatson}  from './../../store/actions/watson'
 class ChatMensagem extends Component {
     constructor(props){
         super(props)
@@ -12,7 +14,7 @@ class ChatMensagem extends Component {
         if(e.keyCode === 13){
             console.log(e.target.value)
             this.props.enviaTexto(e.target.value)
-        }
+            this.props.conversaWatson(e.target.value)
         
     }
 
@@ -21,7 +23,7 @@ class ChatMensagem extends Component {
             <div className="chat-mensagem">
             <hr />
             <InputGroup>
-                <Input onKeyDown={this.inputEnviaTexto} placeholder='Digite sua mensagem'/>
+                <Input onKeyDown={this.inputEnviaTexto} placeholder='Digite sua mensagem' />
                 <InputGroupAddon addonType='append'>
                     <Button color="success">Enviar</Button>
                 </InputGroupAddon>
@@ -34,7 +36,8 @@ class ChatMensagem extends Component {
 
 const mapDispatchToProps = (dispatch) =>{
     return {
-        enviaTexto: (msg) => dispatch(enviaMensagem(msg))
+        enviaTexto: (msg) => dispatch(enviaMensagem(msg)),
+        conversaWatson: (msg) => dispatch(conversaWatson(msg, ''))
     }
 }
 export default connect(null, mapDispatchToProps)(ChatMensagem)
